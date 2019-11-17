@@ -5,7 +5,7 @@ defmodule OpencensusPatterns.MixProject do
     [
       app: :opencensus_patterns,
       version: "0.1.0",
-      elixir: "~> 1.9",
+      elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       docs: [extras: ["README.md"], main: "readme"],
       deps: deps(),
@@ -24,7 +24,8 @@ defmodule OpencensusPatterns.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:credo, "~> 1.0", only: [:dev]}
+      {:credo, "~> 1.0", only: [:dev]},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
