@@ -1,4 +1,4 @@
-# OpencensusPatterns
+# OpenCensus Patterns
 
 **TODO: Add description**
 
