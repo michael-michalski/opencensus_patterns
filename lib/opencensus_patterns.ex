@@ -45,6 +45,7 @@ defmodule OC.Patterns do
       stringified = Enum.map(unquote(args), fn arg -> "#{inspect arg}" end)
       :oc_span.annotation("", Enum.zip(unquote(arg_names), stringified) |> Enum.into(%{}))
       |> :oc_trace.add_time_event(unquote(ctx))
+      unquote(args)
     end
   end
 end
