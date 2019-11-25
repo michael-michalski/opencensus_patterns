@@ -11,10 +11,10 @@ Example of tracing a phoenix endpoint.
 # Top level function uses the trace keyword, and .
 trace home(conn, params), ctx do
   IO.puts "I am a top level function call."
-  
+
   # Dumps the structure as an annotation
-  annotate(ctx, params)
-  
+  annotate(params, ctx)
+
   # Call the nested function
   utility(conn, params, ctx)
 end

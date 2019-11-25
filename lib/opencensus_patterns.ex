@@ -39,14 +39,11 @@ defmodule OC.Patterns do
     end
   end
 
-  defmacro annotate(ctx, args) do
-    arg_names = args |> Enum.map(fn {name, _,_} -> to_string name end)
+  defmacro annotate(args, ctx) do
     quote do
-      stringified = Enum.map(unquote(args), fn arg -> "#{inspect arg}" end)
-      :oc_span.annotation("", Enum.zip(unquote(arg_names), stringified) |> Enum.into(%{}))
+      :oc_span.annotation("#{inspect unquote(args)}", %{})
       |> :oc_trace.add_time_event(unquote(ctx))
       unquote(args)
     end
   end
 end
-
