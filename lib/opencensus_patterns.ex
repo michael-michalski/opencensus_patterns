@@ -15,11 +15,13 @@ defmodule OC.Patterns do
     line = to_string(line_)
     quote do
       def unquote(function) do
-        attributes = %{component: __MODULE__, line: unquote(line), pid: "#{inspect self()}"}
+        attributes = %{"component" => __MODULE__, "line" => unquote(line), "pid" => "#{inspect self()}"}
         unquote(ctx) = :oc_trace.start_span(unquote(fname), :undefined, %{attributes: attributes})
-        result = unquote(expr)
-        :oc_trace.finish_span(unquote(ctx))
-        result
+        try do
+          unquote(expr)
+        after
+          :oc_trace.finish_span(unquote(ctx))
+        end
       end
     end
   end
@@ -30,11 +32,13 @@ defmodule OC.Patterns do
     top_ctx = List.last(func_args_)
     quote do
       def unquote(function) do
-        attributes = %{component: __MODULE__, line: unquote(line), pid: "#{inspect self()}"}
+        attributes = %{"component" => __MODULE__, "line" => unquote(line), "pid" => "#{inspect self()}"}
         unquote(ctx) = :oc_trace.start_span(unquote(fname), unquote(top_ctx), %{attributes: attributes})
-        result = unquote(expr)
-        :oc_trace.finish_span(unquote(ctx))
-        result
+        try do
+          unquote(expr)
+        after
+          :oc_trace.finish_span(unquote(ctx))
+        end
       end
     end
   end

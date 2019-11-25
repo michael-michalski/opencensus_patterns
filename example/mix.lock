@@ -1,11 +1,13 @@
 %{
   "counters": {:hex, :counters, "0.2.1", "aa3d97e88f92573488987193d0f48efce0f3b2cd1443bf4ee760bc7f99322f0c", [:mix, :rebar3], [], "hexpm"},
   "ctx": {:hex, :ctx, "0.5.0", "78e0f16712e12d707a7f34277381b8e193d7c71eaa24d37330dc02477c09eda5", [:rebar3], [], "hexpm"},
+  "dialyxir": {:hex, :dialyxir, "1.0.0-rc.7", "6287f8f2cb45df8584317a4be1075b8c9b8a69de8eeb82b4d9e6c761cf2664cd", [:mix], [{:erlex, ">= 0.2.5", [hex: :erlex, repo: "hexpm", optional: false]}], "hexpm"},
+  "erlex": {:hex, :erlex, "0.2.5", "e51132f2f472e13d606d808f0574508eeea2030d487fc002b46ad97e738b0510", [:mix], [], "hexpm"},
   "jsx": {:hex, :jsx, "2.9.0", "d2f6e5f069c00266cad52fb15d87c428579ea4d7d73a33669e12679e203329dd", [:mix, :rebar3], [], "hexpm"},
-  "opencensus": {:hex, :opencensus, "0.8.1", "53e1e9639e03ade2a3a4f59b1d123d5d2bc32ca3cf80730ead6a25d454604fff", [:rebar3], [{:counters, "~> 0.2.1", [hex: :counters, repo: "hexpm", optional: false]}, {:ctx, "~> 0.5", [hex: :ctx, repo: "hexpm", optional: false]}, {:wts, "~> 0.3", [hex: :wts, repo: "hexpm", optional: false]}], "hexpm"},
-  "opencensus_elixir": {:hex, :opencensus_elixir, "0.2.0", "0e40d220a400b2a58f18fb3b2abde3e614276fd85471ac8c1830dd5074330738", [:mix], [{:opencensus, "~> 0.8.0", [hex: :opencensus, repo: "hexpm", optional: false]}], "hexpm"},
-  "opencensus_patterns": {:hex, :opencensus_patterns, "0.1.0", "5a6cf07856583342fbbe898202749288234394047bb822a01fa8c095c6330313", [:mix], [], "hexpm"},
-  "opencensus_zipkin": {:hex, :opencensus_zipkin, "0.1.0", "36f4e8d35c184671626a3dd6176beecbb05abaca011e7e7a4dd0c66577d884de", [:rebar3], [{:jsx, "~>2.9.0", [hex: :jsx, repo: "hexpm", optional: false]}, {:opencensus, "~>0.8.0", [hex: :opencensus, repo: "hexpm", optional: false]}], "hexpm"},
+  "opencensus": {:git, "https://github.com/census-instrumentation/opencensus-erlang.git", "4787ad57f7d31f4b7505708385c3bc376d1ca86c", []},
+  "opencensus_elixir": {:hex, :opencensus_elixir, "0.4.0", "ac00f3b027841ba47ad8a9205c442c2e5473c1ffeb45e9c2569cccd5d35fa814", [:mix], [{:opencensus, "~> 0.9", [hex: :opencensus, repo: "hexpm", optional: false]}, {:telemetry, "~> 0.4", [hex: :telemetry, repo: "hexpm", optional: false]}], "hexpm"},
+  "opencensus_zipkin": {:hex, :opencensus_zipkin, "0.2.0", "fcc288e6050839d08f630908420e66b6fd49e6cf7230ded549dd71520f81234a", [:rebar3], [{:jsx, "~>2.9.0", [hex: :jsx, repo: "hexpm", optional: false]}, {:opencensus, "~>0.8.0", [hex: :opencensus, repo: "hexpm", optional: false]}], "hexpm"},
   "rfc3339": {:hex, :rfc3339, "0.9.0", "2075653dc9407541c84b1e15f8bda2abe95fb17c9694025e079583f2d19c1060", [:mix, :rebar], [], "hexpm"},
+  "telemetry": {:hex, :telemetry, "0.4.1", "ae2718484892448a24470e6aa341bc847c3277bfb8d4e9289f7474d752c09c7f", [:rebar3], [], "hexpm"},
   "wts": {:hex, :wts, "0.3.0", "5cdf22c775cb1ebae24c326a5db6074d753c42f4bd12a9aa47cc62d3e2c71ad1", [:rebar3], [{:rfc3339, "~>0.9.0", [hex: :rfc3339, repo: "hexpm", optional: false]}], "hexpm"},
 }

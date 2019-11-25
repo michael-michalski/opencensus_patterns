@@ -21,9 +21,11 @@ defmodule Example.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:opencensus_elixir, "~> 0.2.0"},
-      {:opencensus_zipkin, "~> 0.1.0"},
-      {:opencensus_patterns, "~> 0.2.0"}
+      {:opencensus, git: "https://github.com/census-instrumentation/opencensus-erlang.git", override: true},
+      {:opencensus_elixir, "~> 0.4.0"},
+      {:opencensus_zipkin, "~> 0.2.0"},
+      {:opencensus_patterns, "~> 0.2.0"},
+      {:dialyxir,            "~> 1.0.0-rc.6", only: [:dev, :test], runtime: false},
     ]
   end
 end
