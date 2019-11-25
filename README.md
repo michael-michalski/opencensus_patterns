@@ -34,7 +34,7 @@ by adding `opencensus_patterns` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:opencensus_patterns, "~> 0.1.0"}
+    {:opencensus_patterns, "~> 0.2.0"}
   ]
 end
 ```

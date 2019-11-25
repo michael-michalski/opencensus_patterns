@@ -23,7 +23,7 @@ defmodule Example.MixProject do
     [
       {:opencensus_elixir, "~> 0.2.0"},
       {:opencensus_zipkin, "~> 0.1.0"},
-   #   {:opencensus_patterns, "~> 0.1.0"}
+      {:opencensus_patterns, "~> 0.2.0"}
     ]
   end
 end
