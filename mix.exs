@@ -4,7 +4,7 @@ defmodule OpencensusPatterns.MixProject do
   def project do
     [
       app: :opencensus_patterns,
-      version: "0.2.1",
+      version: "0.3.0",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       docs: [extras: ["README.md"], main: "readme"],
